@@ -43,6 +43,12 @@ if has("autocmd")
   filetype plugin indent on
 endif
 
+" Wrap gitcommit files to 64 characters instead of 80.
+" It should be 72, but 64 works better with gerrit, and isn't too restrictive.
+if has("autocmd")
+  autocmd Filetype gitcommit setlocal textwidth=64
+endif
+
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
 set showcmd		" Show (partial) command in status line.
