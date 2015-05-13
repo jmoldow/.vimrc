@@ -20,6 +20,12 @@ runtime! debian.vim
 syntax on
 set ruler
 
+" start with no search highlighting
+set viminfo^=h
+set hlsearch
+" Press Space to turn off highlighting and clear any message already displayed.
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
 " If using a dark background within the editing area and syntax highlighting
 " turn on this option as well
 set background=dark
