@@ -74,3 +74,9 @@ endif
 
 set pastetoggle=<F2>
 set tabstop=2 shiftwidth=2 expandtab
+set textwidth=120
+
+let g:jsonnet_fmt_options = '--in-place --indent 4 --string-style d'
+
+" https://github.com/tpope/vim-pathogen
+execute pathogen#infect()
