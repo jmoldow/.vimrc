@@ -34,6 +34,17 @@ set nocompatible
 syntax enable
 set ruler
 
+packadd! editexisting
+packadd! shellmenu
+packadd! matchit
+
+packadd! sensible
+
+packadd! vim-flagship
+set laststatus=2
+set showtabline=2
+set guioptions-=e
+
 " start with no search highlighting
 set viminfo^=h
 set hlsearch
@@ -96,6 +107,3 @@ let g:jsonnet_fmt_options = '--in-place --indent 4 --string-style d'
 " Not needed anymore, packaging is built into modern Vim
 "execute pathogen#infect()
 
-packadd! editexisting
-packadd! shellmenu
-packadd! matchit

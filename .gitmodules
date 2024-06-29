@@ -1,6 +1,15 @@
 [submodule "pack/tpope/start/sensible"]
-	path = pack/tpope/start/sensible
+	path = pack/tpope/opt/sensible
 	url = https://tpope.io/vim/sensible.git
 [submodule "pack/tpope/start/vim-rsi"]
 	path = pack/tpope/start/vim-rsi
 	url = git@github.com:tpope/vim-rsi.git
+[submodule "pack/tpope/opt/vim-flagship"]
+	path = pack/tpope/opt/vim-flagship
+	url = git@github.com:tpope/vim-flagship.git
+[submodule "pack/tpope/start/vim-fugitive"]
+	path = pack/tpope/start/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive.git
+[submodule "pack/tpope/start/vim-git"]
+	path = pack/tpope/start/vim-git
+	url = git@github.com:tpope/vim-git.git
