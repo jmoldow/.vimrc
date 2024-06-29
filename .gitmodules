@@ -1,0 +1,6 @@
+[submodule "pack/tpope/start/sensible"]
+	path = pack/tpope/start/sensible
+	url = https://tpope.io/vim/sensible.git
+[submodule "pack/tpope/start/vim-rsi"]
+	path = pack/tpope/start/vim-rsi
+	url = git@github.com:tpope/vim-rsi.git
