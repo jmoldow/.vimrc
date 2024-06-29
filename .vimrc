@@ -27,10 +27,11 @@ runtime! debian.vim
 " NOTE: debian.vim sets 'nocompatible'.  Setting 'compatible' changes numerous
 " options, so any other options should be set AFTER setting 'compatible'.
 "set compatible
+set nocompatible
 
 " Vim5 and later versions support syntax highlighting. Uncommenting the next
 " line enables syntax highlighting by default.
-syntax on
+syntax enable
 set ruler
 
 " start with no search highlighting
@@ -92,4 +93,9 @@ set textwidth=120
 let g:jsonnet_fmt_options = '--in-place --indent 4 --string-style d'
 
 " https://github.com/tpope/vim-pathogen
-execute pathogen#infect()
+" Not needed anymore, packaging is built into modern Vim
+"execute pathogen#infect()
+
+packadd! editexisting
+packadd! shellmenu
+packadd! matchit
