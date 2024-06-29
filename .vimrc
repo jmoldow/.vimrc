@@ -1,13 +1,26 @@
-" All system-wide defaults are set in $VIMRUNTIME/debian.vim (usually just
-" /usr/share/vim/vimcurrent/debian.vim) and sourced by the call to :runtime
-" you can find below.  If you wish to change any of those settings, you should
-" do it in this file (/etc/vim/vimrc), since debian.vim will be overwritten
-" everytime an upgrade of the vim packages is performed.  It is recommended to
-" make changes after sourcing debian.vim since it alters the value of the
-" 'compatible' option.
+" $VIMRUNTIME refers to the versioned system directory where Vim stores its
+" system runtime files -- /usr/share/vim/vim<version>.
+"
+" Vim will load $VIMRUNTIME/defaults.vim if the user does not have a vimrc.
+" This happens after /etc/vim/vimrc(.local) are loaded, so it will override
+" any settings in these files.
+"
+" If you don't want that to happen, uncomment the below line to prevent
+" defaults.vim from being loaded.
+" let g:skip_defaults_vim = 1
+"
+" If you would rather _use_ default.vim's settings, but have the system or
+" user vimrc override its settings, then uncomment the line below.
+" source $VIMRUNTIME/defaults.vim
+runtime! defaults.vim
 
-" This line should not be removed as it ensures that various options are
-" properly set to work with the Vim-related packages available in Debian.
+" All Debian-specific settings are defined in $VIMRUNTIME/debian.vim and
+" sourced by the call to :runtime you can find below.  If you wish to change
+" any of those settings, you should do it in this file or
+" /etc/vim/vimrc.local, since debian.vim will be overwritten everytime an
+" upgrade of the vim packages is performed. It is recommended to make changes
+" after sourcing debian.vim so your settings take precedence.
+
 runtime! debian.vim
 
 " Uncomment the next line to make Vim more Vi-compatible
