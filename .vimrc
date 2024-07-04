@@ -39,11 +39,46 @@ packadd! shellmenu
 packadd! matchit
 
 packadd! sensible
+packadd! vim-fugitive
+packadd! gitgutter
+
+let g:ale_echo_cursor = 1
+let g:ale_cursor_detail = 0
+let g:ale_set_loclist = 1
+let g:ale_set_quickfix = 1
+let g:ale_set_highlights = 1
+let g:ale_set_signs = 1
+let g:ale_virtualtext_cursor = 1
+let g:ale_set_balloons = 1
+let g:ale_close_preview_on_insert = 1
+let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 1
+let g:ale_sign_highlight_linenrs = 1
+let g:ale_enabled = 0
+let g:ale_enabled = 1
+packadd! ale
+let g:ale_enabled = 0
+let g:ale_enabled = 1
+
+let g:ale_linters = {
+\   'go': ['gofmt', 'golint', 'gopls', 'govet', 'gobuild'],
+\}
+
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'go': ['gofmt', 'gofumpt', 'goimports', 'golines'],
+\}
 
 packadd! vim-flagship
 set laststatus=2
 set showtabline=2
 set guioptions-=e
+
+packadd! vim-airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#ale#enabled = 1
+"let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+"let g:airline_statusline_ontop=1
 
 " start with no search highlighting
 set viminfo^=h

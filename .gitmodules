@@ -13,3 +13,6 @@
 [submodule "pack/tpope/start/vim-git"]
 	path = pack/tpope/start/vim-git
 	url = git@github.com:tpope/vim-git.git
+[submodule "pack/ages/start/vim-airline"]
+	path = pack/ages/opt/vim-airline
+	url = git@github.com:vim-airline/vim-airline.git
