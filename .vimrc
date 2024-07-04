@@ -62,11 +62,14 @@ let g:ale_enabled = 1
 
 let g:ale_linters = {
 \   'go': ['gofmt', 'golint', 'gopls', 'govet', 'gobuild'],
+\   'json': ['jsonlint', 'spectral', 'vscodejson', 'jq'],
 \}
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'go': ['gofmt', 'gofumpt', 'goimports', 'golines'],
+\   'json': ['jq'],
+\   'proto': ['buf-format', 'protolint'],
 \}
 
 packadd! vim-flagship
@@ -141,4 +144,3 @@ let g:jsonnet_fmt_options = '--in-place --indent 4 --string-style d'
 " https://github.com/tpope/vim-pathogen
 " Not needed anymore, packaging is built into modern Vim
 "execute pathogen#infect()
-
