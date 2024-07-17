@@ -70,6 +70,7 @@ let g:ale_fixers = {
 \   'go': ['gofmt', 'gofumpt', 'goimports', 'golines'],
 \   'json': ['jq'],
 \   'proto': ['buf-format', 'protolint'],
+\   'markdown': ['dprint', 'prettier', 'remark-lint', 'textlint'],
 \}
 
 packadd! vim-flagship
