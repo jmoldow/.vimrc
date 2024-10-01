@@ -16,3 +16,9 @@
 [submodule "pack/ages/start/vim-airline"]
 	path = pack/ages/opt/vim-airline
 	url = git@github.com:vim-airline/vim-airline.git
+[submodule "pack/ages/start/ale"]
+	path = pack/ages/start/ale
+	url = https://github.com/dense-analysis/ale.git
+[submodule "pack/ages/start/vim-gitgutter"]
+	path = pack/ages/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
