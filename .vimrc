@@ -62,7 +62,7 @@ let g:ale_enabled = 1
 
 let g:ale_linters = {
 \   'go': ['gofmt', 'golint', 'gopls', 'govet', 'gobuild'],
-\   'json': ['jsonlint', 'spectral', 'vscodejson', 'jq'],
+\   'json': ['jsonlint', 'spectral', 'vscodejson', 'jq', 'eslint'],
 \}
 
 let g:ale_fixers = {
