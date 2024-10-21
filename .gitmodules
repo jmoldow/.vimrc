@@ -22,3 +22,33 @@
 [submodule "pack/ages/start/vim-gitgutter"]
 	path = pack/ages/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "pack/junegunn/start/vim-peekaboo"]
+	path = pack/junegunn/start/vim-peekaboo
+	url = git@github.com:junegunn/vim-peekaboo.git
+[submodule "pack/junegunn/start/vim-easy-align"]
+	path = pack/junegunn/start/vim-easy-align
+	url = git@github.com:junegunn/vim-easy-align.git
+[submodule "pack/junegunn/start/gv.vim"]
+	path = pack/junegunn/start/gv.vim
+	url = git@github.com:junegunn/gv.vim.git
+[submodule "pack/junegunn/start/rainbow_parentheses.vim"]
+	path = pack/junegunn/start/rainbow_parentheses.vim
+	url = git@github.com:junegunn/rainbow_parentheses.vim.git
+[submodule "pack/ages/start/vim-cool"]
+	path = pack/ages/start/vim-cool
+	url = git@github.com:romainl/vim-cool.git
+[submodule "pack/ages/start/vim-indent-guides"]
+	path = pack/ages/start/vim-indent-guides
+	url = git@github.com:preservim/vim-indent-guides.git
+[submodule "pack/css-color/start/css-color"]
+	path = pack/css-color/start/css-color
+	url = git@github.com:ap/vim-css-color.git
+[submodule "pack/ages/start/vim-smooth-scroll"]
+	path = pack/ages/start/vim-smooth-scroll
+	url = git@github.com:terryma/vim-smooth-scroll.git
+[submodule "pack/ages/start/vim-localvimrc"]
+	path = pack/ages/start/vim-localvimrc
+	url = git@github.com:embear/vim-localvimrc.git
+[submodule "pack/localvimrc/start/vim-localvimrc"]
+	path = pack/localvimrc/start/vim-localvimrc
+	url = git@github.com:embear/vim-localvimrc.git

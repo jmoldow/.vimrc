@@ -63,6 +63,7 @@ let g:ale_enabled = 1
 let g:ale_linters = {
 \   'go': ['gofmt', 'golint', 'gopls', 'govet', 'gobuild'],
 \   'json': ['jsonlint', 'spectral', 'vscodejson', 'jq', 'eslint'],
+\   'python': ['flake8', 'mypy', 'pylint', 'pyright', 'ruff'],
 \}
 
 let g:ale_fixers = {
@@ -71,6 +72,7 @@ let g:ale_fixers = {
 \   'json': ['jq'],
 \   'proto': ['buf-format', 'protolint'],
 \   'markdown': ['dprint', 'prettier', 'remark-lint', 'textlint'],
+\   'python': ['add_blank_lines_for_python_control_statements', 'autopep8', 'ruff', 'isort', 'black'],
 \}
 
 packadd! vim-flagship
@@ -84,11 +86,40 @@ let g:airline#extensions#ale#enabled = 1
 "let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 "let g:airline_statusline_ontop=1
 
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+augroup rainbow_lisp
+  autocmd!
+  autocmd FileType,VimEnter,Syntax,Colorscheme * RainbowParentheses
+augroup END
+let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}'], ['<', '>']]
+
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 1
+
 " start with no search highlighting
 set viminfo^=h
 set hlsearch
 " Press Space to turn off highlighting and clear any message already displayed.
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+let g:cool_total_matches = 1
+
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 8, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 8, 2)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 16, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 16, 4)<CR>
+" http://vimrc-dissection.blogspot.com/2009/02/fixing-pageup-and-pagedown.html
+map <silent> <PageUp>   <c-b>
+map <silent> <S-Up>     <c-b>
+map <silent> <PageDown> <c-f>
+map <silent> <S-Down>   <c-f>
+imap <silent> <PageUp>    <C-O><c-b>
+imap <silent> <S-Up>      <C-O><c-b>
+imap <silent> <PageDown>  <C-O><c-f>
+imap <silent> <S-Down>    <C-O><c-f>
 
 " If using a dark background within the editing area and syntax highlighting
 " turn on this option as well
