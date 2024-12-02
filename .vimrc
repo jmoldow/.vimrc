@@ -105,6 +105,8 @@ set viminfo^=h
 set hlsearch
 " Press Space to turn off highlighting and clear any message already displayed.
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+" disable vim-cool by pretending it has already been loaded
+let g:loaded_cool = 1
 let g:cool_total_matches = 1
 
 noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 8, 2)<CR>
