@@ -184,3 +184,5 @@ let g:localvimrc_persistence_file = $XDG_STATE_HOME . "/localvimrc_persistent"
 let g:localvimrc_blacklist = [$HOME . "/.vimrc", ".*jmoldow/.*vimrc/.*vimrc"]
 let g:localvimrc_name = [".lvimrc", ".vimrc", ".localvimrc", "lvimrc", "vimrc", "localvimrc", ".config/lvimrc", ".config/vimrc", ".config/localvimrc", "config/lvimrc", "config/vimrc", "config/localvimrc"]
 let g:localvimrc_enable = 1
+
+packloadall | silent! helptags ALL
