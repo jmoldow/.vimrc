@@ -176,3 +176,11 @@ let g:jsonnet_fmt_options = '--in-place --indent 4 --string-style d'
 " https://github.com/tpope/vim-pathogen
 " Not needed anymore, packaging is built into modern Vim
 "execute pathogen#infect()
+
+let g:localvimrc_sandbox = 1
+let g:localvimrc_ask = 1
+let g:localvimrc_persistent = 1
+let g:localvimrc_persistence_file = $XDG_STATE_HOME . "/localvimrc_persistent"
+let g:localvimrc_blacklist = [$HOME . "/.vimrc", ".*jmoldow/.*vimrc/.*vimrc"]
+let g:localvimrc_name = [".lvimrc", ".vimrc", ".localvimrc", "lvimrc", "vimrc", "localvimrc", ".config/lvimrc", ".config/vimrc", ".config/localvimrc", "config/lvimrc", "config/vimrc", "config/localvimrc"]
+let g:localvimrc_enable = 1
