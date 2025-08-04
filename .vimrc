@@ -75,6 +75,8 @@ let g:ale_fixers = {
 \   'python': ['add_blank_lines_for_python_control_statements', 'autopep8', 'ruff', 'isort', 'black'],
 \}
 
+let g:ale_yaml_yamllint_options = '-d "{extends: default, rules: {document-start: disable}}"'
+
 packadd! vim-flagship
 set laststatus=2
 set showtabline=2
@@ -97,8 +99,8 @@ augroup rainbow_lisp
 augroup END
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}'], ['<', '>']]
 
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_auto_colors = 1
+let g:indent_guides_enable_on_vim_startup = 0
+let g:indent_guides_auto_colors = 0
 
 " start with no search highlighting
 set viminfo^=h
