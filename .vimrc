@@ -38,6 +38,7 @@ packadd! editexisting
 packadd! shellmenu
 packadd! matchit
 
+packadd! editorconfig
 packadd! sensible
 packadd! vim-fugitive
 packadd! gitgutter
@@ -148,10 +149,13 @@ if has("autocmd")
   filetype plugin indent on
 endif
 
-" Wrap gitcommit files to 64 characters instead of 80.
-" It should be 72, but 64 works better with gerrit, and isn't too restrictive.
 if has("autocmd")
+  " Wrap gitcommit files to 64 characters instead of 80.
+  " It should be 72, but 64 works better with gerrit, and isn't too restrictive.
   autocmd Filetype gitcommit setlocal textwidth=64
+
+  " Python: 4-space indent
+  autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 endif
 
 " The following are commented out as they cause vim to behave a lot
@@ -172,7 +176,7 @@ endif
 
 
 set pastetoggle=<F2>
-set tabstop=2 shiftwidth=2 expandtab
+set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 set textwidth=120
 
 let g:jsonnet_fmt_options = '--in-place --indent 4 --string-style d'
