@@ -193,4 +193,9 @@ let g:localvimrc_blacklist = [$HOME . "/.vimrc", ".*jmoldow/.*vimrc/.*vimrc"]
 let g:localvimrc_name = [".lvimrc", ".vimrc", ".localvimrc", "lvimrc", "vimrc", "localvimrc", ".config/lvimrc", ".config/vimrc", ".config/localvimrc", "config/lvimrc", "config/vimrc", "config/localvimrc"]
 let g:localvimrc_enable = 1
 
+if filereadable("/opt/homebrew/opt/fzf/plugin/fzf.vim")
+  set rtp+=/opt/homebrew/opt/fzf
+  source /opt/homebrew/opt/fzf/plugin/fzf.vim
+endif
+
 packloadall | silent! helptags ALL
