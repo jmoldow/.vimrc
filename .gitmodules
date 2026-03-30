@@ -52,3 +52,6 @@
 [submodule "pack/localvimrc/start/vim-localvimrc"]
 	path = pack/localvimrc/start/vim-localvimrc
 	url = git@github.com:embear/vim-localvimrc.git
+[submodule "pack/junegunn/start/fzf.vim"]
+	path = pack/junegunn/start/fzf.vim
+	url = git@github.com:junegunn/fzf.vim.git

@@ -197,5 +197,9 @@ if filereadable("/opt/homebrew/opt/fzf/plugin/fzf.vim")
   set rtp+=/opt/homebrew/opt/fzf
   source /opt/homebrew/opt/fzf/plugin/fzf.vim
 endif
+if filereadable("/usr/local/opt/fzf/plugin/fzf.vim")
+  set rtp+=/usr/local/opt/fzf
+  source /usr/local/opt/fzf/plugin/fzf.vim
+endif
 
 packloadall | silent! helptags ALL
